@@ -1,0 +1,12 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Stock Dashboard</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-form-field>
+      <input matInput [(ngModel)]="stockSymbol" placeholder="Stock Symbol">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="getStockData()">Get Stock Data</button>
+    <app-stock-chart [data]="stockData"></app-stock-chart>
+  </mat-card-content>
+</mat-card>
