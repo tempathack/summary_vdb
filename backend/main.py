@@ -129,9 +129,7 @@ async def get_stock_data(symbol: str, current_user: User = Depends(get_current_u
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
 
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+# Remove the if __name__ == "__main__" block
 from fastapi import FastAPI, Depends, HTTPException
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from pydantic import BaseModel
